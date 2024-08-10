@@ -28,32 +28,388 @@
     }
     
     .body {
-        background-image: url(images/images\ \(8\)\ \(1\).jpeg);
+        background-image: url(images\ \(8\)\ \(1\).jpeg);
         background-size: cover;
         background-repeat: no-repeat;
     }
     
     .body-bg {
-        background-color: rgba(0, 0, 0, 0.712);
-        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.849);
+        /* height: 100vh; */
+        padding-bottom: 50px;
+    }
+    
+    .return {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0px;
+        display: none;
+    }
+    
+    .return button {
+        padding: 10px;
+        background-color: white;
+        border: none;
+        font-weight: bold;
+        display: block;
+        margin: auto;
+    }
+    
+    .return button a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        background-color: wheat;
+        padding: 10px;
+    }
+    
+    header .display {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+    
+    header .display marquee {
+        font-weight: bold;
+        font-size: 24px;
+    }
+    
+    @media screen and (max-width: 720px) {
+        header .display {
+            width: 90%;
+        }
+        .back-btn button {
+            display: none;
+        }
+        .return {
+            display: block;
+        }
+        .body .return button a {
+            text-decoration: none;
+        }
     }
     
     .back-btn button {
         text-decoration: none;
+        background-color: black;
+        border-radius: 5px;
+        margin-left: 20px;
+        border: none;
+        transition: all .5s;
         padding: 10px;
+    }
+    
+    .back-btn button a {
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 3px;
+        color: white;
+    }
+    
+    .back-btn button:hover i {
+        transform: translateX(-4px);
+        color: blue;
+    }
+    
+    .back-btn button i {
+        color: white;
+        transition: all .5s;
+    }
+    
+    .form-hold {
+        display: block;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        width: 500px;
+        margin-top: 30px;
+    }
+    
+    .form-hold .form-group {
+        width: 100%;
+    }
+    
+    .form-hold .form-group h1 {
+        text-align: center;
+    }
+    
+    .form-hold .form-group .hold1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+    
+    @media screen and (max-width: 720px) {
+        .form-hold {
+            width: 400px;
+        }
+        .detail-hold .text {
+            width: 230px;
+        }
+        .form-hold .form-group h1 {
+            font-size: 25px;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        .form-hold {
+            width: 400px;
+        }
+        .detail-hold .text {
+            width: 230px;
+        }
+        .back-btn button {
+            display: none;
+        }
+        .body .return button a {
+            text-decoration: none;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        .form-hold {
+            width: 300px;
+        }
+        .detail-hold .text {
+            width: 230px;
+        }
+        .back-btn button {
+            display: none;
+        }
+        .body .return button a {
+            text-decoration: none;
+        }
+    }
+    
+    .form-hold .form-group input,
+    select {
+        padding: 10px;
+        width: 90%;
+        margin: 10px 10px;
+        font-size: 16px;
+    }
+    
+    .form-hold .form-group input:focus {
+        border: 1px solid wheat;
+    }
+    
+    .form-hold .form-group select:focus {
+        border: 1.5px solid wheat;
+    }
+    
+    select optgroup {
+        background-color: black;
+        color: white;
+        border: none;
+        transition: all .5s;
+        transition-duration: 3s;
+    }
+    
+    .detail-hold {
+        display: block;
+        margin: auto;
+        width: fit-content;
+    }
+    
+    .detail-hold .text {
         background-color: wheat;
+        padding: 10px;
+        transition: all .5s;
+        text-align: justify;
+    }
+    
+    .agree {
+        width: fit-content;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+    .btn-area {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+    .btn-area button {
+        padding: 10px;
+        width: 30%;
+        margin: 0px 10px;
+        transition: all .5s;
+    }
+    
+    .btn-area button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    .btn-area .reset-btn {
+        background-color: red;
+        border: none;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .btn-area .submit-btn {
+        background-color: green;
+        border: none;
+        color: white;
+        border-radius: 5px;
     }
 </style>
 
 <body>
+
+
     <div class="body">
         <div class="body-bg">
-            <div class="back-btn">
-                <button><i class="fas fa-arrow-left-long"></i><a href="">Home Page</a></button>
+            <div class="return">
+                <button>  <a href="index.html">Return to Home Page</a></button>
             </div>
-            <div class="form-hold"></div>
+            <header>
+
+                <div class="back-btn">
+                    <button><i class="fas fa-arrow-left-long"></i><a href="index.html">Home Page</a></button>
+                </div>
+                <div class="display">
+                    <marquee behavior="slower" direction="">
+                        WELCOME TO DANFRED COMPUTER ENGINEERING LIMITED . . . . KINDLY FILL THE FORM BELOW
+                    </marquee>
+                </div>
+            </header>
+            <div class="form-hold">
+                <form>
+                    <div class="form-group">
+                        <h1>Registration Form</h1>
+                        <div class="hold1">
+                            <input type="text" name="First Name" placeholder="First Name" required>
+                            <input type="text" name="First Name" placeholder="Last Name" required>
+                        </div>
+                        <div class="hold1">
+                            <input type="email" name="Email Address" placeholder="Email Address" required>
+                            <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+                        </div>
+                        <div class="hold1">
+                            <select name="gender" id="" required>
+                                <optgroup label="Gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </optgroup>
+                            </select>
+                            <input type="number" name="Age" placeholder="Age" min="18" max="35" required>
+                        </div>
+
+                        <div class="hold1">
+                            <select name="Occupation" id="" required>
+                                <optgroup label="Occupation" aria-selected="true">
+                                    <option value="Student">Student</option>
+                                    <option value="Unemployed">Unemployed</option>
+                                    <option value="Self-Employed">Self-Employed</option>
+                                    <option value="Civil Servant">Civil Servant</option>
+                                 
+                                </optgroup>
+                            </select>
+                            <input type="date" name="date" placeholder="Date of Birth" required>
+                        </div>
+
+                        <div class="hold1">
+                            <select name="Occupation" id="" required>
+                                <optgroup label="Occupation" aria-selected="true">
+                                    <option value="Abia">Abia</option>
+                                    <option value="Adamawa">Adamawa</option>
+                                    <option value="Akwa Ibom">Akwa Ibom</option>
+                                    <option value="Anambra">Anambra</option>
+                                    <option value="Bauchi">Bauchi</option>
+                                    <option value="Baylesa">Baylesa</option>
+                                    <option value="Benue">Benue</option>
+                                    <option value="Borno">Borno</option>
+                                    <option value="Cross River">Cross River</option>
+                                    <option value="Delta">Delta</option>
+                                    <option value="Ebonyi">Ebonyi</option>
+                                    <option value="Edo">Edo</option>
+                                    <option value="Enugu">Enugu</option>
+                                    <option value="Gombe">Gombe</option>
+                                    <option value="Jigawa">Jigawa</option>
+                                    <option value="Kaduna">Kaduna</option>
+                                    <option value="Kano">Kano</option>
+                                    <option value="Kastina">Kastina</option>
+                                    <option value="Kebbi">Kebbi</option>
+                                    <option value="Kogi">Kogi</option>
+                                    <option value="Kwara">Kwara</option>
+                                    <option value="Lagos">Lagos</option>
+                                    <option value="Nasararwa">Nasararwa</option>
+                                    <option value="Niger">Niger</option>
+                                    <option value="Ogun">Ogun</option>
+                                    <option value="Osun">Osun</option>
+                                    <option value="Oyo">Oyo</option>
+                                    <option value="Plateau">Plateau</option>
+                                    <option value="Rivers">Rivers</option>
+                                    <option value="Sokoto">Sokoto</option>
+                                    <option value="Taraba">Taraba</option>
+                                    <option value="Yobe">Yobe</option>
+                                    <option value="Zamfara">Zamfara</option>
+                                    <option value="FCT Abuja">FCT Abuja</option>
+                                   
+                                 
+                                </optgroup>
+                            </select>
+                            <select name="Courses" id="" required>
+                                <optgroup label="Courses" aria-selected="true">
+                                    <option value="Computer Appreciation">Computer Appreciation</option>
+                                    <option value="Microsoft Office">Microsoft Office</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Programming (Coding)">Programming (Coding)</option>
+                                    <option value="Cloud Computering">Cloud Computering</option>
+                                    <option value="Software Installation">Software Installation</option>
+                                    <option value="HardWare Repairs">HardWare Repairs</option> 
+                                </optgroup>
+                            </select>
+                        </div>
+
+
+                    </div>
+                    <div class="detail-hold">
+                        <details>
+                            <summary>Our Terms and Conditions</summary>
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur unde a facilis amet tempora enim reprehenderit ratione saepe hic! Voluptas sit quia laudantium quos harum laboriosam nam omnis explicabo aliquam.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="agree">
+                        <input type="checkbox" name="checkbox" id="check" required>
+                        <label for="check">I Agree to the Terms and Conditions</label>
+                    </div>
+
+                    <div class="btn-area">
+                        <button type="reset" class="reset-btn">Reset</button>
+                        <button type="submit" class="submit-btn" onclick="message()">Submit</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
+
+    <script>
+        function message() {
+            window.alert("Form Submmission Successful");
+
+        }
+    </script>
 </body>
 
 </html>
